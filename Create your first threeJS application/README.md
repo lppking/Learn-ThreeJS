@@ -7,6 +7,7 @@
      * Three核心要素包含三个部分：scene, camera, renderer
      */
     var scene = new THREE.Scene();  // 创建一个Scene
+
     /**
      * 创建一个Camera（透视投影）
      * 75：field of view(FOV)，视野，即可见范围（度）
@@ -17,6 +18,7 @@
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     
     var renderer = new THREE.WebGLRenderer();
+
     /**
      * setSize()支持在保持渲染大小不变的情况下降低分辨率，用法如下：
      * .setSize(window.innerWidth/2, window.innerHeight/2, false) 这种用法渲染后canvas标签的大小仍然是100%，但是分辨率是原先的一半
@@ -28,6 +30,7 @@
      * 要建立一个立方体，我们需要一个BoxGeometry对象，这个对象包含了立方体的所有点和面.
      */
     var geometry = new THREE.BoxGeometry(1, 1, 1);
+    
     /**
      * 有了支架（立方体），还需要给立方体一个外表皮肤（材质）
      * 这里我们只设置材质的颜色
